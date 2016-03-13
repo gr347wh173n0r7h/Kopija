@@ -9,7 +9,7 @@
 ## Run Rails Application
 ### Pull repository
 ```sh
-$ git pull <repository>
+$ git clone <repository>
 ```
 ### Open repository folder
 ```sh
