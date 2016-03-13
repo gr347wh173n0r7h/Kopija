@@ -3,23 +3,30 @@
 
 ## Install Rails
 
-- [How to Install Rails][rails]
-
+- [How to Install Ruby Rails][rails]
 
 ## Run Rails Application
-### Pull repository
+#### 1- Pull repository
 ```sh
 $ git clone <repository>
 ```
-### Open repository folder
+#### 2- Open repository folder
 ```sh
 $ cd <dir>
 ```
-### Run Gem install
+#### 3- Run Gem install
 ```sh
 $ bundle install
 ```
-### Run local Rails web-server
+#### 4- Create Databe
+```sh
+$ bundle exec rake db:migrate
+```
+#### 5- Seed Database
+```sh
+$ bundel exec rake db:seed
+```
+#### 6- Run local Rails web-server
 ```sh
 $ rails s
 ```
