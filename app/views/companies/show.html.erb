@@ -1,0 +1,33 @@
+<div class="ink-grid">
+  <div class="companies all-80 half-top-space push-center">
+    <div class="all-100 align-center half-top-padding top-space">
+      <h1>Companies</h1>
+    </div>
+
+        <div class="companiesCard padding half-bottom-space">
+          <div class="column-group all-100">
+
+            <div class="cardHeader column-group all-100 left-padding right-padding bottom-padding">
+              <div class="all-50 push-left">
+                <a href="<%= @company.website %>"><img src="<%= @company.img_url %>"></a>
+              </div>
+              <div class="all-50 push-right align-right top-padding">
+                <h3><%= @company.name %></h3>
+                <p><%= @company.industry %></p>
+              </div>
+            </div>
+
+            <div class="all-100 push-right padding">
+              <div class="column-group all-100">
+                <h5>About Us:</h5>
+              </div>
+              <div class="column-group all-100">
+                <p><%= @company.about %></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+  </div>
+</div>

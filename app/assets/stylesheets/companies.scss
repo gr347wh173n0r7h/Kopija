@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.advisors {
+.companies {
   h1 {
     font-weight: 300;
     font-size: 3em;
@@ -10,7 +10,7 @@
   p {
     font-weight: 300;
   }
-  .advisorCard{
+  .companiesCard{
     //border: solid 1px black;
     border-radius: 5px;
     overflow: hidden;
@@ -40,7 +40,9 @@
       //clip: rect(0em,10em,5em,0em);
     }
     .cardHeader{
-      //border-bottom: solid 1px rgba(0, 0, 0, 0.9);
+      border-bottom: solid 1px rgba(166, 166, 166, 0.8);
     }
   }
-}
+}// Place all the styles related to the Companies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/

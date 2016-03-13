@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'advisers'  => 'advisors#index'
   get 'advisors/:id'  => 'advisors#show', as: 'advisor'
 
+  get 'companies' => 'companies#index'
+  get 'companies/:id' => 'companies#show', as: 'company'
+
   resources :advisors
+  resources :companies
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

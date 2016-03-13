@@ -1,14 +1,14 @@
 <div class="ink-grid">
   <div class="advisors all-80 half-top-space push-center">
     <div class="all-100 align-center half-top-padding top-space">
-        <h1>Advisers</h1>
+      <h1>Advisers</h1>
     </div>
     <% @advisor.each do |a| %>
 
         <div class="advisorCard padding half-bottom-space">
           <div class="column-group all-100">
 
-            <div class="column-group all-100 left-padding right-padding">
+            <div class="cardHeader column-group all-100 left-padding right-padding">
               <div class="all-50 push-left">
                 <h3><%= link_to a.name, advisor_path(a)%></h3>
               </div>
