@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EngrProjects</title>
+  <title>Engineering Projects <%# full_title(yield(:title)) %> </title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="ink-drawer" >
+    <div class="bg"></div>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <br><br>
 
-<%= yield %>
+    <div id="content" class="content-drawer">
+      <section class="ink">
+        <%= yield %>
+      </section>
+    </div>
 
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
+
+    <script>
+        Ink.requireModules(['Ink.UI.Drawer_1'], function(Drawer) {
+            var inkDrawer = new Drawer({ sides: 'left', mode: 'push' });
+        });
+    </script>
 </body>
 </html>
