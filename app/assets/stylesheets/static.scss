@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+  background: #ededed none repeat scroll 0 0;
+}
+
 //Home
 
 .Home {
+
   h1 {
     font-weight: 300;
     font-size: 3em;

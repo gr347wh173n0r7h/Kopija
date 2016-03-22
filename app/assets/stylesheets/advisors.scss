@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .advisors {
+
   h1 {
     font-weight: 300;
     font-size: 3em;
@@ -11,7 +12,10 @@
     font-weight: 300;
   }
   .advisorCard{
+    background: white;
     //border: solid 1px black;
+    height: 100%;
+
     border-radius: 5px;
     overflow: hidden;
 

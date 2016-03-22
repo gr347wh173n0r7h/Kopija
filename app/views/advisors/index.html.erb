@@ -1,45 +1,28 @@
 <div class="ink-grid">
-  <div class="advisors all-80 half-top-space push-center">
-    <div class="all-100 align-center half-top-padding top-space">
+  <div class="advisors all-100 half-top-padding">
+    <div class="column-group all-100 push-center half-top-padding">
       <h1>Advisers</h1>
     </div>
+    <div class="column-group horizontal-gutters push-center">
     <% @advisor.each do |a| %>
+        <div class="advisorCardHolder all-25 half-bottom-space">
+            <div class="advisorCard padding half-bottom-space">
 
-        <div class="advisorCard padding half-bottom-space">
-          <div class="column-group all-100">
+                <div class="all-100">
+                  <div class="all-100 left-padding right-padding ">
+                    <div class="all-100 align-center top-padding push-top">
+                      <a href="<%= advisor_path(a) %>"><img src="<%= a.img_url %>"></a>
+                    </div>
+                    <div class="all-100 align-center top-padding push-bottom">
+                      <h3><%= link_to a.name, advisor_path(a)%></h3>
+                      <p><%= a.title %></p>
+                    </div>
+                  </div>
+                </div>
 
-            <div class="cardHeader column-group all-100 left-padding right-padding">
-              <div class="all-50 push-left">
-                <h3><%= link_to a.name, advisor_path(a)%></h3>
-              </div>
-              <div class="all-50 push-right align-right">
-                <p><%= a.title %></p>
-                <a href="mailto:<%= a.email %>" target="_top"><%= a.email %></a>
-              </div>
             </div>
-
-            <div class="all-20 push-left align-center">
-              <img src="<%= a.img_url %>">
-            </div>
-
-            <div class="all-80 push-right">
-              <div class="column-group all-100">
-                <h5>Specialty:</h5>
-              </div>
-              <div class="column-group all-100">
-                <p><%= a.special %></p>
-              </div>
-              <div class="column-group all-100">
-                <h5>Background:</h5>
-              </div>
-              <div class="column-group all-100">
-                <p><%= a.background %></p>
-              </div>
-            </div>
-
-          </div>
         </div>
-
     <% end %>
+    </div>
   </div>
 </div>

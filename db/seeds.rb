@@ -13,6 +13,12 @@ advisors_list = [
     ["Badari (Ishie) Eswar ","SE Advisor","Business,Software Management",
      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
      "badari.eswar@sjsu.edu","https://cmpe.sjsu.edu/files/public/styles/mugshot/public/eswar-badari.jpg?itok=qvjma5Qx"],
+    ["Anna Meng","SE Advisor","Software Engineering",
+     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+     "hsin-yi.meng@sjsu.edu","https://cmpe.sjsu.edu/files/public/styles/mugshot/public/default_images/profile-image-not-found.png?itok=uAB4E22W"],
+    ["Rod Fatoohi","Undergraduate Coordinator","Business,Software Management",
+     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+     "rod.fatoohi@sjsu.edu","https://cmpe.sjsu.edu/files/public/styles/mugshot/public/fatoohi-rod.jpg?itok=BOepm1Vm"]
 ]
 
 advisors_list.each do |name, i_title, i_special, i_background, i_email, i_img_url |
@@ -27,7 +33,17 @@ companies_list = [
     ["Microsoft","http://www.microsoft.com","http://media.newjobs.com/clu/xmic/xmicrosoftx/joblogo.gif",
      "Computer software, online services, video games",
      "Make your mark on the world’s most used technologies. Develop the next hit mobile application. Pioneer a startup that could be the next big thing. At Microsoft, you choose your path. Headquartered in Redmond, Washington, Microsoft is a top innovator in both the consumer and enterprise technology industry. Just a few of the many things our products do are unleash creativity, connect businesses, and make learning more fun. But our continued success is based on one thing: our employees. We hire amazing, talented people and give them the opportunities—and the tools—to succeed. "],
+
+    ["Apple","http://www.apple.com/jobs","http://media.newjobs.com/clu/xaco/xacompx/joblogo.gif",
+     "Consumer Electronics",
+      "Apple is a place where extraordinary people gather to do their best work. Our community is made up of every kind of individual: artists and designers, engineers and scientists, thinkers and doers. Together we create things and experiences people once couldn't have imagined — and now can't imagine living without. So if you're excited by the idea of making a real impact, a career with Apple might be your dream job. Just be ready to dream big. "],
+
+    ["Amazon","http://www.amazon.com/jobs","http://media.newjobs.com/clu/xama/xamazonx/joblogo.gif",
+      "Public company / institution ",
+      "Amazon’s mission is to be Earth’s most customer-centric company where people can find and discover anything they want to buy online. Amazon’s evolution from website to e-commerce and publishing partner to development platform is driven by the pioneering spirit that is part of the company’s DNA. The world’s brightest technology minds come to Amazon to research and develop new technologies that improve the lives of our customers: shoppers, sellers, content creators, and developers around the world. Because that's what being Earth's most customer-centric company is all about, and it's still Day 1 at Amazon. "]
 ]
+
+
 companies_list.each do |i_name, i_website, i_img_url, i_industry, i_about |
   Company.create(name:i_name, website:i_website, img_url:i_img_url, industry:i_industry, about:i_about)
 end
