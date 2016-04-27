@@ -15,16 +15,25 @@
         <div class="Linked column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-middle">
           
           <div class="all-100 align-center" >
-            <h4>Join The Engineering Group</h4>
-	   
-	    <a href="https://www.linkedin.com/groups/7024815"> <button class="ink-button white"><h1> <%= image_tag("linkedin.jpg", class: "logo") %></h1></button></a>
+            <h1>1. Create your group.</h1>
+	            <a href="https://www.linkedin.com/groups/7024815"> 
+                <button class="ink-button white">
+                  <h1> <%= image_tag("linkedin.jpg", class: "logo") %></h1>
+                </button>
+              </a>
+          </div>
+          
+        </div>
+        <div class="Linked column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-middle">
+          <div class="all-100 align-center" >
+            <h1>2. Create your Project Abstract.</h1>
           </div>
           
         </div>
 
-        <div class="companies bottom-padding">
+       <!-- <div class="companies bottom-padding">
             <div class="column-group all-100 push-center half-top-padding half-bottom-padding">
-              <h1>Companies</h1>
+               <h1>Companies</h1>
             </div>
             <div class="column-group horizontal-gutters push-center">
               <% @company.each do |c| %>
@@ -45,11 +54,11 @@
                   </div>
               <% end %>
             </div>
-        </div>
-
+        </div> -->
+      <div class="Linked  all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-middle">
         <div class="advisors bottom-padding">
-            <div class="column-group all-100 push-center half-top-padding half-bottom-padding">
-              <h1>Advisers</h1>
+            <div class="column-group all-100 push-center half-top-padding ">
+              <h1>3. Choose your advisor</h1>
             </div>
             <div class="column-group horizontal-gutters push-center">
               <% @advisor.each do |a| %>
@@ -73,6 +82,7 @@
               <% end %>
             </div>
         </div>
+      </div>
 
       </div>
     </div>
