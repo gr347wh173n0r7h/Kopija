@@ -21,13 +21,15 @@
                 <div class="DescHeader all-100"><h5>Description:</h5></div>
                 <div class="all-100 half-top-padding half-left-padding half-right-padding"><p><%=@project.desc%></p></div>
           </div>
-          <div class="column all-100 align-center top-padding">
-            <%= link_to 'Delete Project',
-                        project_path(@project),
-                        method: :delete,
-                        class: "ink-button all-90 blue",
-                        data: {confirm: 'Are you sure'} %>
-          </div>
+          <% if current_user == @leader%>
+              <div class="column all-100 align-center top-padding">
+                <%= link_to 'Delete Project',
+                            project_path(@project),
+                            method: :delete,
+                            class: "ink-button all-90 blue",
+                            data: {confirm: 'Are you sure'} %>
+              </div>
+          <%end%>
         </div>
       </div>
     </div>

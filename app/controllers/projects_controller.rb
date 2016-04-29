@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
     @project[:num_people] = 1
     if @project.save
       flash[:danger] = 'Project Created'
-      redirect_to projects_path
+      redirect_to project_path(@project)
     else
       flash[:failure] = "Error Occured"
       render 'new'
