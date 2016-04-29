@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project[:leader_id] = current_user.id
     @project[:num_people] = 1
+
     if @project.save
       flash[:danger] = 'Project Created'
       redirect_to project_path(@project)
@@ -32,7 +33,20 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
   def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:danger] = 'Project Updated'
+      redirect_to project_path(@project)
+    else
+      flash[:failure] = "Error Occured"
+      render 'edit'
+    end
+
   end
 
   def destroy
@@ -44,7 +58,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:prescription).permit(:title, :sub_title, :desc)
+    params.require(:project).permit(:title, :sub_title, :desc)
   end
 
 end

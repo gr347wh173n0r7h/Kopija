@@ -18,7 +18,22 @@
     <br><br>
     <div id="content" class="content-drawer half-top-space half-top-padding">
       <section class="ink">
-
+        <% if flash[:failure] %>
+            <div class="column-group all-90 push-center push-middle">
+              <div class="ink-alert basic error all-100">
+                <button class="ink-dismiss">&times;</button>
+                <p><%= flash[:failure] %></p>
+              </div>
+            </div>
+        <% end %>
+        <% if flash[:danger] %>
+            <div class="column-group all-90 push-center push-middle">
+              <div class="ink-alert basic success all-100">
+                <button class="ink-dismiss">&times;</button>
+                <p><%= flash[:danger] %></p>
+              </div>
+            </div>
+        <% end %>
 
         <%= yield %>
       </section>

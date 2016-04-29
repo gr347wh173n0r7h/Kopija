@@ -10,6 +10,9 @@
   p {
     font-weight: 300;
   }
+  .Title {
+    border-bottom: 1px solid rgba(100,100,100,.2);
+  }
   section.module.parallax-1 {
     background: image-url("bg.jpg");
     background-size: cover;
@@ -39,6 +42,7 @@
     h1 {
       font-weight: 300;
       font-size: 3em;
+      color: #0d68c2;
     }
     p {
       font-weight: 300;
@@ -86,6 +90,10 @@
 
       }
     }
+  }
+  .New {
+    h3 {color: #0d68c2;}
+    .Title {border-bottom: 1px solid rgba(100,100,100,.2);}
   }
   .Show{
     h4{
