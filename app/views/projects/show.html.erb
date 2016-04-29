@@ -1,0 +1,35 @@
+<div class="ProjectShow all-100 half-top-space">
+  <div class="ink-grid">
+    <div class="push-center">
+      <div class="column-group all-100 push-center padding">
+
+
+        <div class="Show column-group all-80 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-center">
+          <div class="Title all-100 align-center half-top-padding half-bottom-space" >
+            <h3><%=@project.title%></h3>
+            <h4><%=@project.sub_title%></h4>
+          </div>
+          <div class="Members all-100 align-center half-top-padding half-bottom-space" >
+            <div class="column-group all-100">
+                <div class="all-25 align-left"><h5>Leader:</h5></div>
+                <div class="all-25 align-left"><p><%=@leader.name%></p></div>
+                <div class="all-25 align-left"><h5>Members:</h5></div>
+                <div class="all-25 align-left"></div>
+            </div>
+          </div>
+          <div class="Desc all-100 align-left half-top-padding half-bottom-space" >
+                <div class="DescHeader all-100"><h5>Description:</h5></div>
+                <div class="all-100 half-top-padding half-left-padding half-right-padding"><p><%=@project.desc%></p></div>
+          </div>
+          <div class="column all-100 align-center top-padding">
+            <%= link_to 'Delete Project',
+                        project_path(@project),
+                        method: :delete,
+                        class: "ink-button all-90 blue",
+                        data: {confirm: 'Are you sure'} %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

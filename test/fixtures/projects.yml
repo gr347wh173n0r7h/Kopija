@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sub_title: MyString
+  leader_id: 
+  advisor_id: 
+  desc: MyText
+  num_people: 
+
+two:
+  name: MyString
+  sub_title: MyString
+  leader_id: 
+  advisor_id: 
+  desc: MyText
+  num_people: 

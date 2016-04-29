@@ -1,0 +1,54 @@
+<div class="ProjectNew all-100 half-top-space">
+  <div class="ink-grid">
+    <div class="push-center">
+      <div class="column-group all-100 push-center padding">
+
+        <% if flash[:failure] %>
+            <div class="column-group all-100 push-center push-middle">
+              <div class="ink-alert basic error all-100">
+                <button class="ink-dismiss">&times;</button>
+                <p><%= flash[:failure] %></p>
+              </div>
+            </div>
+        <% end %>
+
+        <div class="New column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-center">
+          <div class="all-100 align-center half-top-padding half-bottom-space" >
+            <h3>Create a Project</h3>
+          </div>
+        <%= form_for(:prescription, url: projects_create_path, :html => {:class => "ink-form all-100"}) do |f| %>
+            <div class="all-80 push-center half-top-space">
+
+              <div class="control-group column-group gutters">
+                <%= f.label( :title, "Project Title", :class => "all-20 align-right") %>
+                <div class="control all-80">
+                  <%= f.text_field( :title, :placeholder => "Title", :class => 'form-control') %>
+                </div>
+              </div>
+
+              <div class="control-group column-group gutters">
+                <%= f.label( :sub_title, "Sub Title", :class => "all-20 align-right") %>
+                <div class="control all-80">
+                  <%= f.text_field( :sub_title, :placeholder => "A one line description of the project", :class => 'form-control') %>
+                </div>
+              </div>
+
+              <div class="control-group column-group gutters">
+                <%= f.label( :desc, "Project Description", :class => "all-20 align-right") %>
+                <div class="control all-80">
+                  <%= f.text_area( :desc, :placeholder => "Project Description...", :class => 'form-control') %>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="all-80 push-center half-bottom-padding">
+              <%= submit_tag( "Creat Project", class: "ink-button all-100 blue")%>
+            </div>
+
+        <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

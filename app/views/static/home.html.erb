@@ -12,18 +12,16 @@
     <div class="push-center">
       <div class="column-group all-100 push-center padding bottom-space">
 
-        <div class="Linked column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-middle">
-          
-          <div class="all-50 align-center" >
-            <!--<h1>1. Create your group.</h1>-->
-	            <a href="https://www.linkedin.com/groups/7024815"> 
+        <div class="Linked column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-center">
+          <div class="all-50 align-left push-middle" >
+            <h4>Join the Group</h4>
+          </div>
+          <div class="all-50 align-right" >
+	            <a href="https://www.linkedin.com/groups/7024815">
                 <button class="ink-button white">
                   <%= image_tag("linkedin.jpg", class: "logo") %>
                 </button>
               </a>
-          </div>
-          <div class="all-50 align-center push-center" >
-            <h1>2. Create your Project Abstract.</h1>
           </div>
         </div>
         <!--<div class="column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-middle">-->
@@ -31,35 +29,38 @@
             <!--<h1>2. Create your Project Abstract.</h1>-->
           <!--</div>-->
         <!--</div>-->
-
-      <div class="  all-100 left-padding right-padding half-bottom-padding bottom-space push-middle">
-        <div class="advisors bottom-padding">
-            <div class="column-group all-100 push-center half-top-padding ">
-              <h1>3. Choose your advisor</h1>
-            </div>
-            <div class="column-group horizontal-gutters push-center">
-              <% @advisor.each do |a| %>
-                  <div class="advisorCardHolder all-25 medium-30 small-50 tiny-100 half-bottom-space">
-                    <div class="advisorCard padding half-bottom-space">
-
-                      <div class="all-100">
-                        <div class="all-100 left-padding right-padding ">
-                          <div class="all-100 align-center top-padding push-top">
-                            <a href="<%= advisor_path(a) %>"><img src="<%= a.img_url %>"></a>
-                          </div>
-                          <div class="all-100 align-center top-padding push-bottom">
-                            <h3><%= link_to a.name, advisor_path(a)%></h3>
-                            <p><%= a.title %></p>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
+        <div class="Steps column-group all-100 left-padding right-padding half-top-padding half-bottom-padding bottom-space push-center">
+          <div class="Header all-95 align-center half-bottom-padding" >
+            <h3>Steps</h3>
+          </div>
+          <div class=" all-100 horizontal-gutters push-center align-center top-padding">
+            <div class="column-group all-100">
+                <div class="all-33 push-left">
+                  <%= image_tag("1.png", class: "Icon") %>
+                  <div class=" padding">
+                    <h4>Create an Account</h4>
+                    <p>Simply Register with an email to begin your project search <%= link_to "Sign up now!", register_path %></p>
                   </div>
-              <% end %>
+                </div>
+                <div class="all-33 push-center">
+                  <%= image_tag("2.png", class: "Icon") %>
+                  <div class=" padding">
+                    <h4>Find a Project</h4>
+                    <p>Search for a project or if nothing is interesting create your own.</p>
+                  </div>
+                </div>
+                <div class="all-33 push-right">
+                  <%= image_tag("3.png", class: "Icon") %>
+                  <div class="padding">
+                    <h4>Get an Advisor</h4>
+                    <p>Once you have your project and team search through the list of advisors.</p>
+                  </div>
+                </div>
             </div>
+          </div>
         </div>
-      </div>
+
+
 
       </div>
     </div>
