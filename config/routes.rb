@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   get 'companies' => 'companies#index'
   get 'companies/:id' => 'companies#show', as: 'company'
-  get 'signup'  => 'users#new'
+  get 'register'  => 'users#new'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
   resources :users
   resources :advisors
