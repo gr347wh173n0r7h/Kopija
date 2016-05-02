@@ -17,16 +17,18 @@ class ProjectsController < ApplicationController
   end
 
   def new
+
   end
 
   def create
+    @user = current_user
     @project = Project.new(project_params)
     @project[:leader_id] = current_user.id
     @project[:num_people] = 1
-
+    @project.teams.build(project_id: @project.id, user_id: @user.id)
     if @project.save
-      flash[:danger] = 'Project Created'
-      redirect_to project_path(@project)
+        flash[:danger] = 'Project Created'
+        redirect_to project_path(@project)
     else
       flash[:failure] = "Error Occured"
       render 'new'

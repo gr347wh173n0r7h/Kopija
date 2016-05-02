@@ -14,7 +14,13 @@
                 <div class="all-25 align-left"><h5>Leader:</h5></div>
                 <div class="all-25 align-left"><p><%=@leader.name%></p></div>
                 <div class="all-25 align-left"><h5>Members:</h5></div>
-                <div class="all-25 align-left"></div>
+                <div class="all-25 align-left">
+                  <%@project.users.each do |u|%>
+                    <%if u.id != @leader.id %>
+                        <p><%=u.name%></p>
+                    <% end %>
+                  <%end%>
+                </div>
             </div>
           </div>
           <div class="Desc all-100 align-left half-top-padding half-bottom-space" >
@@ -34,7 +40,12 @@
               </div>
           <%else%>
               <div class="column all-100 align-center top-padding">
-                <%= link_to 'Join Project', project_path(@project), class: "ink-button all-100 blue" %>
+                <%= form_for(:team, url: teams_create_path, :html => {:class => "ink-form all-100"}) do |f| %>
+                 <%= hidden_field_tag :project_id, @project.id %>
+                 <%= hidden_field_tag :user_id, current_user.id %>
+                 <%= submit_tag( "Join Project", class: "ink-button all-100 blue")%>
+                <% end %>
+
               </div>
           <%end%>
         </div>

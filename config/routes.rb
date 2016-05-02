@@ -20,8 +20,11 @@ Rails.application.routes.draw do
   # get 'projects/update' => 'projects#update'
   delete 'projects/id' => 'projects#destroy'
 
+  post 'teams/create'
+
   resources :users
   resources :advisors
   resources :companies
   resources :projects
+  resources :teams
 end
