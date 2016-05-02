@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :advisors
   root 'static#home'
 
   get 'advisers'  => 'advisors#index'

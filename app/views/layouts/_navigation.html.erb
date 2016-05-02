@@ -14,6 +14,15 @@
               <li class="heading"><%= link_to("Projects", root_path) %></li>
               <li class="heading"><%= link_to("Advisors", advisers_path) %></li>
               <li class="heading"><%= link_to("Companies", companies_path) %></li>
+              <% if advisor_signed_in? %>
+                  <li class="heading">
+                    <%= link_to('Logout', destroy_advisor_session_path, :method => :delete) %>
+                  </li>
+              <% else %>
+                  <li class="heading">
+                    <%= link_to('Login', new_advisor_session_path)  %>
+                  </li>
+              <% end %>
             </ul>
         </div>
       </nav>
@@ -26,5 +35,14 @@
     <li class="heading"><%= link_to("Projects", root_path) %></li>
     <li class="heading"><%= link_to("Advisors", advisers_path) %></li>
     <li class="heading"><%= link_to("Companies", advisers_path) %></li>
+    <% if advisor_signed_in? %>
+        <li class="heading">
+          <%= link_to('Logout', destroy_advisor_session_path, :method => :delete) %>
+        </li>
+    <% else %>
+        <li class="heading">
+          <%= link_to('Login', new_advisor_session_path)  %>
+        </li>
+    <% end %>
   </ul>
 </div>

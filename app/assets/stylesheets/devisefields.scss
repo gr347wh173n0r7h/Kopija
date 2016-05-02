@@ -1,0 +1,12 @@
+.devise
+{
+  textarea,input{
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+  }
+  .field{
+    margin-bottom:10px;
+  }
+}
