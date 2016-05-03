@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
     if logged_in?
       @project = Project.find(params[:id])
       @leader = User.find(@project.leader_id)
+      @team = Team.where(project_id: @project.id, user_id: current_user.id).take
     elsif
     redirect_to root_path
     end
@@ -21,17 +22,27 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @project = Project.new(project_params)
-    @project[:leader_id] = current_user.id
-    @project[:num_people] = 1
-    @project.teams.build(project_id: @project.id, user_id: @user.id)
-    if @project.save
-        flash[:danger] = 'Project Created'
-        redirect_to project_path(@project)
+    if !Project.where(leader_id: current_user.id).take
+      if !Team.where(user_id: current_user.id).take
+        @user = current_user
+        @project = Project.new(project_params)
+        @project[:leader_id] = current_user.id
+        @project[:num_people] = 1
+        @project.teams.build(project_id: @project.id, user_id: @user.id)
+        if @project.save
+            flash[:danger] = 'Project Created'
+            redirect_to project_path(@project)
+        else
+          flash[:failure] = "Error Occured"
+          render 'new'
+        end
+      else
+        flash[:failure] = "You are already in a team!"
+        redirect_to :back
+      end
     else
-      flash[:failure] = "Error Occured"
-      render 'new'
+      flash[:failure] = "You have already created a project!"
+      redirect_to project_path(@project)
     end
   end
 

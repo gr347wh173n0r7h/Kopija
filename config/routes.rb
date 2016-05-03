@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   delete 'projects/id' => 'projects#destroy'
 
   post 'teams/create'
+  delete 'teams/id' => 'teams#destroy'
 
   resources :users
   resources :advisors

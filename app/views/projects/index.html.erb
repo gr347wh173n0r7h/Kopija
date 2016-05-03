@@ -17,17 +17,17 @@
             <div class="column-group all-100 push-center half-top-padding half-bottom-padding">
               <h1>Current Projects</h1>
             </div>
-            <div class="column-group horizontal-gutters push-center">
+            <div class="column-group all-100 horizontal-gutters push-center">
               <% @projects.each do |a| %>
                   <div class="ProjectCardHolder all-25 medium-30 small-50 tiny-100 half-bottom-space">
-                    <div class="ProjectCard padding half-bottom-space">
+                    <div class="ProjectCard all-100 padding half-bottom-space">
                       <div class="all-100">
                         <div class="all-100 half-left-padding half-right-padding ">
                           <div class="all-100 align-center top-padding push-bottom">
                             <div class="Title all-100 "><h3><%= link_to a.title, project_path(a)%></h3></div>
                             <div class="Desc half-top-padding">
                                 <p><%= a.sub_title %></p>
-                                <p><%= a.desc %></p>
+                                <p><%= a.desc.first(30) %>...</p>
                                 <p>Number of Mumbers: <%= a.num_people%></p>
                             </div>
                           </div>
