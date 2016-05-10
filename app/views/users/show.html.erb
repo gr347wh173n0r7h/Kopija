@@ -1,8 +1,11 @@
 <div class="ink-grid">
     <div class="column-group push-center push-middle bottom-space half-top-padding">
-    <div class="Register all-60 push-center push-middle padding">
-        <p><%=@user.name%></p>
-        <p><%=@user.email%></p>
-      </div>
+        <div class="Register all-60 push-center push-middle padding">
+          <div class="Title column-group all-100 half-bottom-space push-middle" >
+            <div class="all-40"><h3><%=@user.name%></h3></div>
+            <div class="all-40 align-right"><p><%=@user.email%></p></div>
+            <div class="all-20 align-right"><%=link_to image_tag("set.png", class: "Icon"), edit_user_path(current_user)%></div>
+          </div>
+        </div>
     </div>
 </div>

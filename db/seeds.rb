@@ -47,3 +47,11 @@ companies_list = [
 companies_list.each do |i_name, i_website, i_img_url, i_industry, i_about |
   Company.create(name:i_name, website:i_website, img_url:i_img_url, industry:i_industry, about:i_about)
 end
+
+User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456")
+
+User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456")
+
+User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456")
+
+User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456")

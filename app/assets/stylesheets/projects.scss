@@ -111,3 +111,15 @@
     }
   }
 }
+.Icon{
+  max-height: 1.5em;
+}
+.Icon2{
+  max-height: 3em;
+}
+.Title,{
+  border-bottom: 1px solid rgba(100,100,100,.2);
+  padding-top: 0;
+  h1, h3{color: #0d68c2}
+  h1:hover, h3:hover, a:hover{text-decoration: none;}
+}

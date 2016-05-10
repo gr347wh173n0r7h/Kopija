@@ -2,25 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;;
-}
 
-input:active, input.focus {
-  box-shadow: #0069d6;
-}
 
-input[type=submit]:hover {
-  background-color: lightskyblue;
-}
 
-input {
-  height: auto !important;
-}
 
 .Register {
+
+  h1{      color: #0d68c2;}
+
+  input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;;
+  }
+
+  input:active, input.focus {
+    box-shadow: #0069d6;
+  }
+
+  //input[type=submit]:hover {
+  //  background-color: lightskyblue;
+  //}
+
+  input {
+    margin-bottom: 0;
+    height: auto !important;
+  }
+
   background:rgba(255, 255, 255, 0.95);
 
   -webkit-box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.5);
