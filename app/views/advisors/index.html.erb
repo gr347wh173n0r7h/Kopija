@@ -6,21 +6,23 @@
     <div class="column-group horizontal-gutters push-center">
     <% @advisor.each do |a| %>
         <div class="advisorCardHolder all-25 medium-30 small-50 tiny-100 half-bottom-space">
+          <a href="<%= advisor_path(a) %>">
             <div class="advisorCard padding half-bottom-space">
 
                 <div class="all-100">
                   <div class="all-100 left-padding right-padding ">
                     <div class="all-100 align-center top-padding push-top">
-                      <a href="<%= advisor_path(a) %>"><img src="<%= a.img_url %>"></a>
+                      <img src="<%= a.img_url %>">
                     </div>
                     <div class="all-100 align-center top-padding push-bottom">
-                      <h3><%= link_to a.name, advisor_path(a)%></h3>
+                      <h3><%= a.name%></h3>
                       <p><%= a.title %></p>
                     </div>
                   </div>
                 </div>
 
             </div>
+          </a>
         </div>
     <% end %>
     </div>

@@ -39,13 +39,34 @@
   }
   .Projects {
 
-    h1 {
+    h1, h3 {
       font-weight: 300;
       font-size: 3em;
       color: #0d68c2;
     }
+    h3{color: #0d68c2;}
     p {
       font-weight: 300;
+    }
+    a{
+      text-decoration: none;
+      p{
+        color: #555555;
+      }
+      h2, h3, h4, {
+        font-weight: 300;
+        //line-height: 0;
+        //padding-top: 20px;
+      }
+      h2{font-size: 2.5em;}
+      h3 {font-size: 2.5em;}
+      h4 {font-size: 1.5em;}
+      h5 {font-size: 1.25em; font-weight: 300;}
+    }
+    .ProjectCard:hover{
+      -webkit-box-shadow: 0px 3px 5px 0px rgba(13, 104, 194,.75);
+      -moz-box-shadow: 0px 3px 5px 0px rgba(13, 104, 194,.75);
+      box-shadow: 0px 3px 5px 0px rgba(13, 104, 194,.75);
     }
     .ProjectCard {
       background: white;
@@ -60,8 +81,8 @@
       box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
 
       h3, h3 a {
-        font-size: 1.5em;
-        font-weight: 400;
+        font-size: 2em;
+        font-weight: 300;
         color: inherit;
       }
       h3 a:hover {
