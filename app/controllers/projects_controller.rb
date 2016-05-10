@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
       end
     else
       flash[:failure] = "You have already created a project!"
-      redirect_to project_path(@project)
+      redirect_to projects_path
     end
   end
 
