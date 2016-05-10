@@ -25,9 +25,11 @@
                         <div class="all-100 half-left-padding half-right-padding ">
                           <div class="all-100 align-center top-padding push-bottom">
                             <div class="Title all-100 "><h3><%=a.title%></h3></div>
-                            <div class="Desc half-top-padding">
+                            <div class="Desc half-top-padding" style="min-height: 10em;">
                                 <p><%= a.sub_title %></p>
                                 <p><%= a.desc.first(30) %>...</p>
+                            </div>
+                            <div class="Desc half-top-padding">
                                 <% if a.num_people == 1 %>
                                     <%= image_tag("p0.png", class: "Icon2") %>
                                 <% elsif a.num_people == 2 %>

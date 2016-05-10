@@ -47,11 +47,63 @@ companies_list = [
 companies_list.each do |i_name, i_website, i_img_url, i_industry, i_about |
   Company.create(name:i_name, website:i_website, img_url:i_img_url, industry:i_industry, about:i_about)
 end
+#Creators
+User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456")     #1
+User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456")      #2
+User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456")   #3
+User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456")      #4
+#G1
+User.create(name: "Eric Ericson", email: "Eric@testing.com",password: "123456", password_confirmation: "123456")      #5
+User.create(name: "Frank Ford", email: "Frank@testing.com",password: "123456", password_confirmation: "123456")       #6
+User.create(name: "Greg Ganders", email: "Greg@testing.com",password: "123456", password_confirmation: "123456")      #7
+User.create(name: "Hellen Heth", email: "Hellen@testing.com",password: "123456", password_confirmation: "123456")     #8
+#G2
+User.create(name: "Ian Illes", email: "Ian@testing.com",password: "123456", password_confirmation: "123456")          #9
+#G3
+User.create(name: "Jordan Jacob", email: "Jordan@testing.com",password: "123456", password_confirmation: "123456")    #10
+User.create(name: "Kevin Kell", email: "Kevin@testing.com",password: "123456", password_confirmation: "123456")       #11
+User.create(name: "Liam Lidelle", email: "Liam@testing.com",password: "123456", password_confirmation: "123456")      #12
+#G4
+User.create(name: "Mark McMark", email: "Mark@testing.com",password: "123456", password_confirmation: "123456")       #13
+User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", password_confirmation: "123456")         #14
 
-User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456")
+#Projects
 
-User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456")
+project_list = [
+    ["MicroAccel", "A micro particle accelerator", User.find_by_name("Alice Lidell").id, "A particle accelerator is a machine that uses electromagnetic fields to propel charged particles to nearly light speed and to contain them in well-defined beams. Large accelerators are best known for their use in particle physics as colliders (e.g. the LHC at CERN, RHIC at Brookhaven National Laboratory, and Tevatron at Fermilab). Other kinds of particle accelerators are used in a large variety of applications, including particle therapy for oncological purposes, and as synchrotron light sources for the study of condensed matter physics. There are currently more than 30,000 accelerators in operation around the world.",
+      4],
+    ["Green Water", "Building a green Desalination", User.find_by_name("Bob McBobber").id, "Desalination or desalinization is a process that removes minerals from saline water. More generally, desalination may also refer to the removal of salts and minerals, as in soil desalination, which also happens to be a major issue for agricultural production.",
+      1],
+    ["The Room", "A virtual reality chat room", User.find_by_name("Charlie Chap").id, "Virtual reality or virtual realities (VR), also known as immersive multimedia or computer-simulated reality, is a computer technology that replicates an environment, real or imagined, and simulates a user's physical presence and environment to allow for user interaction. Virtual realities artificially create sensory experience, which can include sight, touch, hearing, and smell.",
+      3],
+    ["SuperMed", "Low income doctor location application", User.find_by_name("Dave Daniels").id, "he California Medical Assistance Program (Medi-Cal or MediCal) is the name of the California Medicaid welfare program serving low-income individuals, including but not limited to: families, seniors, persons with disabilities, children in foster care, pregnant women, and childless adults with incomes below 138% of federal poverty level.",
+      2],
+]
 
-User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456")
+project_list.each do |i_title, i_sub_title, i_leader, i_text, i_people |
+  Project.create(title:i_title, sub_title:i_sub_title, leader_id:i_leader, desc:i_text, num_people:i_people)
+end
 
-User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456")
+#Teams
+
+team_list = [
+    [Project.find_by_title("MicroAccel").id, User.find_by_name("Eric Ericson").id],
+    [Project.find_by_title("MicroAccel").id, User.find_by_name("Frank Ford").id],
+    [Project.find_by_title("MicroAccel").id, User.find_by_name("Greg Ganders").id],
+    [Project.find_by_title("MicroAccel").id, User.find_by_name("Hellen Heth").id],
+
+    [Project.find_by_title("Green Water").id, User.find_by_name("Ian Illes").id],
+
+    [Project.find_by_title("The Room").id, User.find_by_name("Jordan Jacob").id],
+    [Project.find_by_title("The Room").id, User.find_by_name("Kevin Kell").id],
+    [Project.find_by_title("The Room").id, User.find_by_name("Liam Lidelle").id],
+
+    [Project.find_by_title("SuperMed").id, User.find_by_name("Mark McMark").id],
+    [Project.find_by_title("SuperMed").id, User.find_by_name("Nate Nook").id]
+
+]
+
+team_list.each do |i_p, i_u|
+  Team.create(project_id:i_p, user_id:i_u)
+end
+
