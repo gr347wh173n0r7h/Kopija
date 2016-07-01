@@ -39,13 +39,24 @@
       </section>
     </div>
 
-    <footer>
+    <footer id="footer">
       <%= render 'layouts/footer' %>
     </footer>
     <%= debug(params) if Rails.env.development? %>
     <script>
         Ink.requireModules(['Ink.UI.Drawer_1'], function(Drawer) {
             var inkDrawer = new Drawer({ sides: 'left', mode: 'push' });
+        });
+
+        $(document).ready(function() {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight) {
+                $('#footer').css('margin-top', 25 + (docHeight - footerTop) + 'px');
+            }
         });
     </script>
 </body>
