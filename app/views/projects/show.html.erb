@@ -12,12 +12,30 @@
           <div class="Members all-100 align-center half-top-padding half-bottom-space" >
             <div class="column-group all-100">
                 <div class="all-25 align-left"><h5>Leader:</h5></div>
-                <div class="all-25 align-left"><p><%=@leader.name%></p></div>
-                <div class="all-25 align-left"><h5>Members:</h5></div>
                 <div class="all-25 align-left">
+                  <p>
+                    <%=@leader.name%>
+                    <% if @leader.major_id == 1 %>
+                        <%= image_tag("Coding.png", class: "Icon3") %>
+                    <% else %>
+                        <%= image_tag("Microchip.png", class: "Icon3") %>
+                    <% end %>
+                  </p>
+                </div>
+                <div class="all-25 align-left"><h5>Members:</h5></div>
+                <div class="column-group all-25 align-left">
                   <%@project.users.each do |u|%>
                     <%if u.id != @leader.id %>
-                        <p><%=u.name%></p>
+                        <div class="all-50">
+                            <p><%=u.name%></p>
+                        </div>
+                        <div class="all-50">
+                          <% if u.major_id == 1 %>
+                              <%= image_tag("Coding.png", class: "Icon4") %>
+                          <% else %>
+                              <%= image_tag("Microchip.png", class: "Icon4") %>
+                          <% end %>
+                        </div>
                     <% end %>
                   <%end%>
                 </div>
