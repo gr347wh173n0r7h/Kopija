@@ -16,9 +16,9 @@
                   <p>
                     <%=@leader.name%>
                     <% if @leader.major_id == 1 %>
-                        <%= image_tag("Coding.png", class: "Icon3") %>
+                        <%= image_tag("Coding.png", class: "Icon3", title: "Software Engineer") %>
                     <% else %>
-                        <%= image_tag("Microchip.png", class: "Icon3") %>
+                        <%= image_tag("Microchip.png", class: "Icon3", title: "Computer Engineer") %>
                     <% end %>
                   </p>
                 </div>
@@ -31,9 +31,15 @@
                         </div>
                         <div class="all-50">
                           <% if u.major_id == 1 %>
-                              <%= image_tag("Coding.png", class: "Icon4") %>
+                              <%= image_tag("Coding.png", class: "Icon4", title: "Software Engineer") %>
                           <% else %>
-                              <%= image_tag("Microchip.png", class: "Icon4") %>
+                              <%= image_tag("Microchip.png", class: "Icon4", title: "Computer Engineer") %>
+                          <% end %>
+                          <% if current_user == @leader%>
+                              <%= link_to image_tag("rdel.png", class: "Icon4 fade-in", title: "Remove from team"),
+                                          team_path(u.id),
+                                          method: :delete,
+                                          data: {confirm: 'Are you sure you want to remove user'} %>
                           <% end %>
                         </div>
                     <% end %>
@@ -47,14 +53,16 @@
           </div>
           <% if current_user == @leader%>
               <div class="column all-50 align-center top-padding half-right-padding">
-                <%= link_to 'Edit Project', edit_project_path(@project), class: "ink-button all-100 blue" %>
+                <%= link_to image_tag("setting_g.png", class: "Icon6") + ' Edit Project',
+                            edit_project_path(@project),
+                            class: "ink-button all-100 blue" %>
               </div>
               <div class="column all-50 align-center top-padding half-left-padding">
-                <%= link_to 'Delete Project',
+                <%= link_to image_tag("del_g.png", class: "Icon6") + ' Delete Project',
                             project_path(@project),
                             method: :delete,
                             class: "ink-button all-100 blue",
-                            data: {confirm: 'Are you sure'} %>
+                            data: {confirm: 'Are you sure you want to delete project'} %>
               </div>
           <%else%>
               <% if !@team %>
@@ -62,16 +70,16 @@
                     <%= form_for(:team, url: teams_create_path, :html => {:class => "ink-form all-100"}) do |f| %>
                      <%= hidden_field_tag :project_id, @project.id %>
                      <%= hidden_field_tag :user_id, current_user.id %>
-                     <%= submit_tag( "Join Project", class: "ink-button all-100 blue")%>
+                     <%= submit_tag( "Join Project", class: "ink-button all-95 blue")%>
                     <% end %>
                   </div>
               <% else %>
                   <div class="column all-100 align-center top-padding">
-                    <%= link_to 'Quit Project',
-                                team_path(@team),
+                    <%= link_to image_tag("del_g.png", class: "Icon6") + ' Leave Project',
+                                team_path(current_user),
                                 method: :delete,
                                 class: "ink-button all-100 blue",
-                                data: {confirm: 'Are you sure you want to quit'} %>
+                                data: {confirm: 'Are you sure you want to leave'} %>
                   </div>
               <% end %>
 

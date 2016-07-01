@@ -45,7 +45,8 @@ class TeamsController < ApplicationController
   end
 
   def destroy
-    @team = Team.find(params[:id])
+    # @team = Team.find(params[:id])
+    @team = Team.where(user_id: params[:id]).take
     @project = Project.find(@team.project_id)
     if @team.destroy
       @project.update_attribute(:num_people, @project.num_people - 1)

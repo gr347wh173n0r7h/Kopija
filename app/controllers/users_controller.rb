@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
+    if current_user != @user
+      redirect_to current_user
+    end
   end
 
   def new
@@ -13,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome!"
       redirect_to @user
     else
       render 'new'
@@ -22,6 +25,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @major = Major.all
   end
 
   def update
@@ -30,6 +34,7 @@ class UsersController < ApplicationController
       flash[:danger] = "Profile updated"
       redirect_to @user
     else
+      flash[:failure] = "Please Check all Fields"
       render 'edit'
     end
   end

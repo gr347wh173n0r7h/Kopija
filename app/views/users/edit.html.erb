@@ -39,6 +39,12 @@
                 </div>
                 <!--<p class="tip">Please confirm your password</p>-->
               </div>
+              <div class="control-group">
+                <%= f.label :major_id, :class => "all-20 align-right" %>
+                <div class="control all-100">
+                  <%= f.select :major_id, options_for_select(@major.collect{ |s| [s.name, s.id] }) %>
+                </div>
+              </div>
             </fieldset>
             <div class="all-100 push-middle bottom-space">
               <%= f.submit "Update Account", class: "ink-button all-100 blue"%>
