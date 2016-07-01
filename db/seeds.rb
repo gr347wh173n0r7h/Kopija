@@ -47,25 +47,30 @@ companies_list = [
 companies_list.each do |i_name, i_website, i_img_url, i_industry, i_about |
   Company.create(name:i_name, website:i_website, img_url:i_img_url, industry:i_industry, about:i_about)
 end
+
+#Majors
+Major.create(name:"Software Engineering", abbrev: "SE")
+Major.create(name:"Computer Engineering", abbrev: "CMPE")
+
 #Creators
-User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456")     #1
-User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456")      #2
-User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456")   #3
-User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456")      #4
+User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)     #1
+User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456", major_id: 2)      #2
+User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)   #3
+User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #4
 #G1
-User.create(name: "Eric Ericson", email: "Eric@testing.com",password: "123456", password_confirmation: "123456")      #5
-User.create(name: "Frank Ford", email: "Frank@testing.com",password: "123456", password_confirmation: "123456")       #6
-User.create(name: "Greg Ganders", email: "Greg@testing.com",password: "123456", password_confirmation: "123456")      #7
-User.create(name: "Hellen Heth", email: "Hellen@testing.com",password: "123456", password_confirmation: "123456")     #8
+User.create(name: "Eric Ericson", email: "Eric@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #5
+User.create(name: "Frank Ford", email: "Frank@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #6
+User.create(name: "Greg Ganders", email: "Greg@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)      #7
+User.create(name: "Hellen Heth", email: "Hellen@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)     #8
 #G2
-User.create(name: "Ian Illes", email: "Ian@testing.com",password: "123456", password_confirmation: "123456")          #9
+User.create(name: "Ian Illes", email: "Ian@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)          #9
 #G3
-User.create(name: "Jordan Jacob", email: "Jordan@testing.com",password: "123456", password_confirmation: "123456")    #10
-User.create(name: "Kevin Kell", email: "Kevin@testing.com",password: "123456", password_confirmation: "123456")       #11
-User.create(name: "Liam Lidelle", email: "Liam@testing.com",password: "123456", password_confirmation: "123456")      #12
+User.create(name: "Jordan Jacob", email: "Jordan@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)    #10
+User.create(name: "Kevin Kell", email: "Kevin@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #11
+User.create(name: "Liam Lidelle", email: "Liam@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #12
 #G4
-User.create(name: "Mark McMark", email: "Mark@testing.com",password: "123456", password_confirmation: "123456")       #13
-User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", password_confirmation: "123456")         #14
+User.create(name: "Mark McMark", email: "Mark@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #13
+User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)         #14
 
 #Projects
 

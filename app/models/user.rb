@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :projects, :through => :teams
   has_many :teams
+  belongs_to :major
 
   attr_accessor :remember_token
   before_save { self.email = email.downcase }

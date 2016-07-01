@@ -24,7 +24,7 @@
                 <div class="control all-100">
                   <%= f.email_field :email, :class => 'form-control', :placeholder => 'Please enter your email'%>
                 </div>
-                <p class="tip">Must be valid University email</p>
+                <p class="tip">Must be valid email</p>
               </div>
               <div class="control-group">
                 <%= f.label :password, :class => "all-20 align-right" %>
@@ -39,6 +39,12 @@
                   <%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => 'Please confirm your password'%>
                 </div>
                 <!--<p class="tip">Please confirm your password</p>-->
+              </div>
+              <div class="control-group">
+                <%= f.label :major_id, :class => "all-20 align-right" %>
+                <div class="control all-100">
+                  <%= f.select :major_id, options_for_select(@major.collect{ |s| [s.name, s.id] }) %>
+                </div>
               </div>
             </fieldset>
             <div class="all-100 push-middle bottom-space">

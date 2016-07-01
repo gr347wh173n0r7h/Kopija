@@ -1,7 +1,7 @@
 <div class="ProjectIndex all-100 ">
   <div class="ink-grid">
     <div class="push-center">
-      <div class="column-group all-100 push-center padding">
+      <div class="column-group all-100 push-center top-padding">
 
 
         <div class="Create column-group all-100 left-padding right-padding bottom-space push-center">
@@ -24,10 +24,9 @@
                       <div class="all-100">
                         <div class="all-100 half-left-padding half-right-padding ">
                           <div class="all-100 align-center top-padding push-bottom">
-                            <div class="Title all-100 "><h3><%=a.title%></h3></div>
+                            <div class="Title all-100 " style="min-height: 7em;"><h3><%=a.title%></h3></div>
                             <div class="Desc half-top-padding" style="min-height: 10em;">
                                 <p><%= a.sub_title %></p>
-                                <p><%= a.desc.first(30) %>...</p>
                             </div>
                             <div class="Desc half-top-padding">
                                 <% if a.num_people == 1 %>
