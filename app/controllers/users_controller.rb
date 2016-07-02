@@ -30,11 +30,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    @major = Major.all
     if @user.update_attributes(user_params)
       flash[:danger] = "Profile updated"
       redirect_to @user
     else
-      flash[:failure] = "Please Check all Fields"
+      # flash[:failure] = "Please Check all Fields"
       render 'edit'
     end
   end
