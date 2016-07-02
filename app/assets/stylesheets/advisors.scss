@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.AdvisorIndex {
+  section.module.parallax-1 {
+    background: image-url("laptop.jpeg");
+    background-size: cover;
+    background-position: 0 -50px;
+  }
+}
+
 .advisors {
 
   h1 {

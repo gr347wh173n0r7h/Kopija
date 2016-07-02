@@ -1,4 +1,9 @@
-<div class="ProjectIndex all-100 ">
+<div class="ProjectIndex all-100 half-top-space">
+  <section class="module parallax parallax-1">
+    <div class="container">
+      <h3>Current Projects</h3>
+    </div>
+  </section>
   <div class="ink-grid">
     <div class="push-center">
       <div class="column-group all-100 push-center top-padding">
@@ -13,11 +18,11 @@
           </div>
         </div>
 
-          <div class="Projects all-100 ">
-            <div class="Title column-group all-100 push-center half-top-padding half-bottom-space">
-              <h1>Current Projects</h1>
+          <div class="Projects all-100 push-center">
+            <div class="Title column-group all-100 push-center half-bottom-space">
+              <!--<h1>Current Projects</h1>-->
             </div>
-            <div class="column-group all-100 horizontal-gutters push-center">
+            <div class="column-group horizontal-gutters half-top-padding push-center">
               <% @projects.each do |a| %>
                   <div class="ProjectCardHolder all-25 medium-30 small-50 tiny-100 half-bottom-space">
                     <a href="<%= project_path(a) %>"><div class="ProjectCard grow all-100 padding half-bottom-space">
@@ -47,6 +52,7 @@
               <% end %>
             </div>
           </div>
+
       </div>
     </div>
   </div>
