@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
     if logged_in?
       @projects = Project.order("id").all
     elsif
-    redirect_to root_path
+    redirect_to login_path
     end
   end
 
@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
       @leader = User.find(@project.leader_id)
       @team = Team.where(project_id: @project.id, user_id: current_user.id).take
     elsif
-    redirect_to root_path
+    redirect_to login_path
     end
   end
 

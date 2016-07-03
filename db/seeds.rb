@@ -76,20 +76,35 @@ User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", pas
 
 project_list = [
     ["MicroAccel", "A micro particle accelerator", User.find_by_name("Alice Lidell").id, "A particle accelerator is a machine that uses electromagnetic fields to propel charged particles to nearly light speed and to contain them in well-defined beams. Large accelerators are best known for their use in particle physics as colliders (e.g. the LHC at CERN, RHIC at Brookhaven National Laboratory, and Tevatron at Fermilab). Other kinds of particle accelerators are used in a large variety of applications, including particle therapy for oncological purposes, and as synchrotron light sources for the study of condensed matter physics. There are currently more than 30,000 accelerators in operation around the world.",
-      4],
+      4, 1],
     ["Green Water", "Building a green Desalination", User.find_by_name("Bob McBobber").id, "Desalination or desalinization is a process that removes minerals from saline water. More generally, desalination may also refer to the removal of salts and minerals, as in soil desalination, which also happens to be a major issue for agricultural production.",
-      1],
+      1, 1],
     ["The Room", "A virtual reality chat room", User.find_by_name("Charlie Chap").id, "Virtual reality or virtual realities (VR), also known as immersive multimedia or computer-simulated reality, is a computer technology that replicates an environment, real or imagined, and simulates a user's physical presence and environment to allow for user interaction. Virtual realities artificially create sensory experience, which can include sight, touch, hearing, and smell.",
-      3],
+      3, 7],
     ["SuperMed", "Low income doctor location application", User.find_by_name("Dave Daniels").id, "he California Medical Assistance Program (Medi-Cal or MediCal) is the name of the California Medicaid welfare program serving low-income individuals, including but not limited to: families, seniors, persons with disabilities, children in foster care, pregnant women, and childless adults with incomes below 138% of federal poverty level.",
-      2],
+      2, 12],
 ]
 
-project_list.each do |i_title, i_sub_title, i_leader, i_text, i_people |
-  Project.create(title:i_title, sub_title:i_sub_title, leader_id:i_leader, desc:i_text, num_people:i_people)
+project_list.each do |i_title, i_sub_title, i_leader, i_text, i_people, i_type |
+  Project.create(title:i_title, sub_title:i_sub_title, leader_id:i_leader, desc:i_text, num_people:i_people, type_id:i_type)
 end
 
 #Teams
+
+Type.create(name: "Hardware General")             #1
+Type.create(name: "Hardware - IOT")               #2
+Type.create(name: "Hardware - Embedded Systems")  #3
+Type.create(name: "Hardware - Robotics")          #4
+Type.create(name: "Hardware - Other")             #5
+Type.create(name: "Software General")             #6
+Type.create(name: "Software System")              #7
+Type.create(name: "Software - Web App")           #8
+Type.create(name: "Software - Mobile App")        #9
+Type.create(name: "Software - Games")             #10
+Type.create(name: "Support Software")             #11
+Type.create(name: "Service Software")             #12
+Type.create(name: "Software - Other")             #13
+
 
 team_list = [
     [Project.find_by_title("MicroAccel").id, User.find_by_name("Eric Ericson").id],
@@ -105,7 +120,6 @@ team_list = [
 
     [Project.find_by_title("SuperMed").id, User.find_by_name("Mark McMark").id],
     [Project.find_by_title("SuperMed").id, User.find_by_name("Nate Nook").id]
-
 ]
 
 team_list.each do |i_p, i_u|
