@@ -34,6 +34,13 @@
                 </div>
 
                 <div class="control-group column-group gutters">
+                  <%= f.label :type_id, :class => "all-20 align-right" %>
+                  <div class="control all-80">
+                    <%= f.select :type_id, options_for_select(@type.collect{ |s| [s.name, s.id] }) %>
+                  </div>
+                </div>
+
+                <div class="control-group column-group gutters">
                   <%= f.label( :desc, "Project Description", :class => "all-20 align-right") %>
                   <div class="control all-80">
                     <%= f.text_area( :desc, :class => 'form-control') %>
