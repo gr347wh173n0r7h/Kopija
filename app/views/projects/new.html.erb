@@ -33,6 +33,13 @@
               </div>
 
               <div class="control-group column-group gutters">
+                <%= f.label :skill, :class => "all-20 align-right" %>
+                <div class="control all-80">
+                  <%= f.text_field( :skills, :placeholder => "A list of skills needed", :class => 'form-control') %>
+                </div>
+              </div>
+
+              <div class="control-group column-group gutters">
                 <%= f.label( :desc, "Project Description", :class => "all-20 align-right") %>
                 <div class="control all-80">
                   <%= f.text_area( :desc, :placeholder => "Project Description...", :class => 'form-control') %>

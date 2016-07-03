@@ -60,7 +60,6 @@ class ProjectsController < ApplicationController
       flash[:failure] = "Error Occured"
       render 'edit'
     end
-
   end
 
   def destroy
@@ -73,7 +72,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :sub_title, :desc, :type_id)
+    params.require(:project).permit(:title, :sub_title, :desc, :type_id, :skills)
   end
 
 end

@@ -76,17 +76,17 @@ User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", pas
 
 project_list = [
     ["MicroAccel", "A micro particle accelerator", User.find_by_name("Alice Lidell").id, "A particle accelerator is a machine that uses electromagnetic fields to propel charged particles to nearly light speed and to contain them in well-defined beams. Large accelerators are best known for their use in particle physics as colliders (e.g. the LHC at CERN, RHIC at Brookhaven National Laboratory, and Tevatron at Fermilab). Other kinds of particle accelerators are used in a large variety of applications, including particle therapy for oncological purposes, and as synchrotron light sources for the study of condensed matter physics. There are currently more than 30,000 accelerators in operation around the world.",
-      4, 1],
+      4, 1, "Science"],
     ["Green Water", "Building a green Desalination", User.find_by_name("Bob McBobber").id, "Desalination or desalinization is a process that removes minerals from saline water. More generally, desalination may also refer to the removal of salts and minerals, as in soil desalination, which also happens to be a major issue for agricultural production.",
-      1, 1],
+      1, 1, "Eco Science"],
     ["The Room", "A virtual reality chat room", User.find_by_name("Charlie Chap").id, "Virtual reality or virtual realities (VR), also known as immersive multimedia or computer-simulated reality, is a computer technology that replicates an environment, real or imagined, and simulates a user's physical presence and environment to allow for user interaction. Virtual realities artificially create sensory experience, which can include sight, touch, hearing, and smell.",
-      3, 7],
+      3, 7, "Software Development including RoR and Angular"],
     ["SuperMed", "Low income doctor location application", User.find_by_name("Dave Daniels").id, "he California Medical Assistance Program (Medi-Cal or MediCal) is the name of the California Medicaid welfare program serving low-income individuals, including but not limited to: families, seniors, persons with disabilities, children in foster care, pregnant women, and childless adults with incomes below 138% of federal poverty level.",
-      2, 12],
+      2, 12, "Software Service Dev with MEAN stack"],
 ]
 
-project_list.each do |i_title, i_sub_title, i_leader, i_text, i_people, i_type |
-  Project.create(title:i_title, sub_title:i_sub_title, leader_id:i_leader, desc:i_text, num_people:i_people, type_id:i_type)
+project_list.each do |i_title, i_sub_title, i_leader, i_text, i_people, i_type, i_skills |
+  Project.create(title:i_title, sub_title:i_sub_title, leader_id:i_leader, desc:i_text, num_people:i_people, type_id:i_type, skills:i_skills)
 end
 
 #Teams
