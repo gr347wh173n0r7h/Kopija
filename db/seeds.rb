@@ -53,24 +53,24 @@ Major.create(name:"Software Engineering", abbrev: "SE")
 Major.create(name:"Computer Engineering", abbrev: "CMPE")
 
 #Creators
-User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)     #1
-User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456", major_id: 2)      #2
-User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)   #3
-User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #4
+User.create(name: "Alice Lidell", email: "Alice@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)     #1
+User.create(name: "Bob McBobber", email: "Bob@testing.com", password: "123456", password_confirmation: "123456", major_id: 2, activated: true, activated_at: Time.zone.now)      #2
+User.create(name: "Charlie Chap", email: "Charlie@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)   #3
+User.create(name: "Dave Daniels", email: "Dave@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)      #4
 #G1
-User.create(name: "Eric Ericson", email: "Eric@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #5
-User.create(name: "Frank Ford", email: "Frank@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #6
-User.create(name: "Greg Ganders", email: "Greg@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)      #7
-User.create(name: "Hellen Heth", email: "Hellen@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)     #8
+User.create(name: "Eric Ericson", email: "Eric@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)      #5
+User.create(name: "Frank Ford", email: "Frank@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)       #6
+User.create(name: "Greg Ganders", email: "Greg@testing.com",password: "123456", password_confirmation: "123456", major_id: 2, activated: true, activated_at: Time.zone.now)      #7
+User.create(name: "Hellen Heth", email: "Hellen@testing.com",password: "123456", password_confirmation: "123456", major_id: 2, activated: true, activated_at: Time.zone.now)     #8
 #G2
-User.create(name: "Ian Illes", email: "Ian@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)          #9
+User.create(name: "Ian Illes", email: "Ian@testing.com",password: "123456", password_confirmation: "123456", major_id: 2 , activated: true, activated_at: Time.zone.now)          #9
 #G3
-User.create(name: "Jordan Jacob", email: "Jordan@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)    #10
-User.create(name: "Kevin Kell", email: "Kevin@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #11
-User.create(name: "Liam Lidelle", email: "Liam@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)      #12
+User.create(name: "Jordan Jacob", email: "Jordan@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)    #10
+User.create(name: "Kevin Kell", email: "Kevin@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)       #11
+User.create(name: "Liam Lidelle", email: "Liam@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)      #12
 #G4
-User.create(name: "Mark McMark", email: "Mark@testing.com",password: "123456", password_confirmation: "123456", major_id: 1)       #13
-User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", password_confirmation: "123456", major_id: 2)         #14
+User.create(name: "Mark McMark", email: "Mark@testing.com",password: "123456", password_confirmation: "123456", major_id: 1, activated: true, activated_at: Time.zone.now)       #13
+User.create(name: "Nate Nook", email: "Nate@testing.com",password: "123456", password_confirmation: "123456", major_id: 2, activated: true, activated_at: Time.zone.now)         #14
 
 #Projects
 

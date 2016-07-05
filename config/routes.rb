@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   delete 'teams/id' => 'teams#destroy'
 
   resources :users
+  resources :account_activations, only: [:edit]
   resources :advisors
   resources :companies
   resources :projects
