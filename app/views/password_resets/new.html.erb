@@ -1,0 +1,35 @@
+<div class="ink-grid">
+  <div class="column-group push-center push-middle push-center top-padding">
+    <div class="Login all-50 push-center push-middle top-padding horizontal-gutters">
+      <center><h1>Reset Password</h1></center>
+
+      <% if flash[:danger] %>
+          <div class="column-group all-100 push-center push-middle">
+            <div class="ink-alert basic error all-80">
+              <button class="ink-dismiss">&times;</button>
+              <p><%= flash[:danger] %></p>
+            </div>
+          </div>
+      <% end %>
+
+      <%= form_for(:password_reset, url: password_resets_path, :html => {:class => "ink-form "}) do |f| %>
+
+          <div class="control-group all-80 push-center push-middle top-padding">
+
+            <div class="column-group all-100">
+              <%= f.label :email, :class => "all-20 align-right right-padding" %>
+              <div class="control all-80">
+                <%= f.email_field :email%>
+              </div>
+            </div>
+
+            <div class="control all-100 push-center push-middle top-padding bottom-padding">
+              <%= f.submit "Send Password Reset", class: "ink-button blue"%>
+            </div>
+
+
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

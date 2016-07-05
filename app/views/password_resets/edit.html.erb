@@ -1,0 +1,36 @@
+<div class="ink-grid">
+  <div class="column-group push-center push-middle push-center top-padding">
+    <div class="Login all-50 push-center push-middle top-padding horizontal-gutters">
+      <center><h1>Update Password</h1></center>
+
+
+      <%= form_for(@user, url: password_reset_path(params[:id]), :html => {:class => "ink-form "}) do |f| %>
+
+          <div class="all-80 push-center push-middle">
+            <%= render 'shared/error_messages' %>
+          </div>
+
+          <div class="control-group all-80 push-center push-middle top-padding">
+
+            <%= hidden_field_tag :email, @user.email %>
+
+            <%= f.label :password, :class => "all-20 align-right right-padding" %>
+            <div class="control all-100">
+              <%= f.password_field :password%>
+            </div>
+
+            <%= f.label :password_confirmation, :class => "all-20 align-right right-padding" %>
+            <div class="control all-100">
+              <%= f.password_field :password_confirmation%>
+            </div>
+
+            <div class="control all-100 push-center push-middle top-padding bottom-padding">
+              <%= f.submit "Update Password", class: "ink-button blue"%>
+            </div>
+
+
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
