@@ -6,9 +6,10 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding-top: 0;
+  //padding-top: 0;
   //background: #1a1a1a;
-  background: rgba(166, 166, 166, 0.9) none repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  //background: rgba(166, 166, 166, 0.9) none repeat scroll 0 0;
   -webkit-transform: scale3d(1,1,1);
   top: 0;
 
@@ -22,32 +23,32 @@
   }
   .ink-navigation ul li a {
     background: none;
-    padding: .8em 1em;
+    padding: .7em 1em;
     //color: #bbb;
     color: white;
     //text-transform: uppercase;
     font-weight: 300;
     line-height: 24px;
-    border-radius: 2px;
+    //border-radius: 2px;
   }
   .ink-navigation ul li a:hover {
     color: #fff;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
-    color: rgba(0, 0, 0, 0.8);
+    //color: rgba(0, 0, 0, 0.8);
     //color: rgba(81, 203, 238, 1);
   }
   .ink-navigation ul li a.logoPlaceholder:hover {
     //background: 0 0;
   }
   .ink-navigation ul li a.logoPlaceholder {
-    text-transform: uppercase;
+    //text-transform: uppercase;
     background: none;
     margin-right: .5em;
-    padding: .5em 0;
-    font-weight: 300;
-    line-height: 24px;
-    font-size: 1.4em;
+    padding: .35em 1em;
+    font-weight: 200;
+    //line-height: 24px;
+    font-size: 1.7em;
   }
   .ink-navigation ul li button.fa-bars {
     background: rgba(0, 0, 0, 0.0) none repeat scroll 0 0;
@@ -61,15 +62,15 @@
   ul.menu {
     background: none;
   }
-  .Logo {
-    padding-left: 0px;
-    height: 4em;
-    //position:absolute;
-  }
-  .MenuOverlay {
-    background: image_url('sjsulogo2.png') no-repeat;
-    height: 4.8em;
-  }
+  //.Logo {
+  //  padding-left: 0px;
+  //  height: 4em;
+  //  //position:absolute;
+  //}
+  //.MenuOverlay {
+  //  background: image_url('sjsulogo2.png') no-repeat;
+  //  height: 4.8em;
+  //}
 }
 
 //DRAWER
@@ -122,7 +123,8 @@ body.ink-drawer .left-drawer li>a, body.ink-drawer .right-drawer li>a {
   color: white;
   font-size: 14px;
   font-weight: 300;
-  background: rgba(166, 166, 166, 0.8);
+  //background: rgba(166, 166, 166, 0.8);
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
   //background: -webkit-linear-gradient(#1e1e1e, #4d4d4d); /* For Safari 5.1 to 6.0 */
   //background: -o-linear-gradient(#1e1e1e, #4d4d4d); /* For Opera 11.1 to 12.0 */
   //background: -moz-linear-gradient(#1e1e1e, #4d4d4d); /* For Firefox 3.6 to 15 */
@@ -139,11 +141,13 @@ body.ink-drawer .left-drawer li>a, body.ink-drawer .right-drawer li>a {
   ul li a {
     color: white;
     font-weight: 300;
-
+    padding: .7em .5em;
+    border-radius: 2px;
   }
   ul li a:hover {
+    color: #fff;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
   }
 }
 
