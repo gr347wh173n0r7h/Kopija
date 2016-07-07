@@ -1,10 +1,12 @@
-# SJSU CMPE Engineering Projects
+# Kopija - Project Organization Made Easy
+
+###### Previously know as SJSU CMPE Engineering Projects
 
 ----
 
 ### Deployment
 
-- [Heroku Depolyment][heroku]
+- [Kopija Depolyment][heroku]
 ## Ubuntu
 ---
 ### Install Rails
@@ -30,7 +32,7 @@ $ bundle exec rake db:migrate
 ```
 #### 5- Seed Database
 ```sh
-$ bundel exec rake db:seed
+$ bundle exec rake db:seed
 ```
 #### 6- Run local Rails web-server
 ```sh
@@ -65,14 +67,14 @@ $ bundle exec rake db:migrate
 ```
 #### 9- Seed Database
 ```sh
-$ bundel exec rake db:seed
+$ bundle exec rake db:seed
 ```
-#### 9- Runs Rails Server
+#### 9- Run Rails Server
 ```sh
 $ rails s -b $IP -p $PORT
 ```
 
 [//]: #
 [rails]: <https://gorails.com/setup/ubuntu/14.10>
-[heroku]: <https://protected-basin-46093.herokuapp.com/>
+[heroku]: <Kopija.org>
 [cloud9]: <https://c9.io/>
